@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БД клиентов</title>
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+    <nav class="nav">
+        <a href="#" class="nav__logo-link">
+            <img src="/img/logo.svg" alt="Логотип">
+        </a>
+        <form action="#" class="nav__form">
+            <input type="text" class="nav__input-search" id="inputSearch" placeholder="Введите запрос">
+        </form>
+    </nav>
+</head>
+<body id="body">
+    <main>
+        <div class="container">
+            <h1 class="main__title">Клиенты</h1>
+            <div class="table__wrap">
+                <table class="table" id="table">
+                    <thead class="thead">
+                        <tr>
+                            <th>
+                                <a href="#" class="id__link" id="idLink">ID</a>
+                                <img src="/img/arrow__down.svg" alt="#" class="th__img">
+                            </th>
+                            <th>
+                                <a href="#" class="fio__link" id="fioLink">Фамилия Имя Отчество</a>
+                                <img src="/img/arrow__down.svg" alt="#" class="th__img">
+                            </th>
+                            <th>
+                                <a href="#" class="created__link" id="createdLink">Дата и время создания</a>
+                                <img src="/img/arrow__down.svg" alt="#" class="th__img">
+                            </th>
+                            <th>
+                                <a href="#" class="updated__link" id="updatedLink">Последние изменения</a>
+                                <img src="/img/arrow__down.svg" alt="#" class="th__img">
+                            </th>
+                            <th>Контакты</th>
+                            <th>Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+            <button id="addButton" class="add__client-btn">
+                <img src="/img/add__client-btn.svg" alt="#" class="add__client-img">
+                <img src="/img/add__client-btn__hover.svg" alt="#" class="add__client-img__hover hidden">
+                Добавить клиента
+            </button>
+            <div id="deleteWindow"></div>
+            <div id="patchWindow"></div>
+        </div>
+
+       
+        <div class="add__block" id="addBlock">
+            <div class="add__container" id="addContainer">
+                    <div class="close__block">
+                        <h2 class="add__title">Новый клиент</h2>
+                        <a href="#" class="add__close-link" id="addClose">
+                            <span class="add__close"></span>
+                        </a>
+                    </div>
+                    <form action="#" class="add__form" id="addForm">
+                        <div id="addLabelSurname" class="add__label-block">
+                            <label for="surname" id="surnameLabel" class="add__label hidden">Фамилия</label>
+                            <input type="text" id="addSurname" class="add__input" placeholder="Фамилия*">
+                        </div>
+                        <div id="addLabelName" class="add__label-block">
+                            <label for="name" id="nameLabel" class="add__label hidden">Имя</label>
+                            <input type="text" id="addName" class="add__input" placeholder="Имя*">
+                        </div>
+                        <div id="addLabelLastName" class="add__label-block">
+                            <label for="lastName" id="lastNameLabel" class="add__label hidden">Отчество</label>
+                            <input type="text" id="addLastName" class="add__input" placeholder="Отчество">
+                        </div>
+                    </form>
+                    <div class="contacts__block" id="contactsBlock">
+                        <a href="#" class="contacts__add" id="contactsAdd">
+                            <div class="add__contacts-img"></div>
+                            Добавить контакт
+                        </a>
+                        <form action="" class="contacts__form" id="contactsFormAdd">
+                        </form>
+                    </div>
+                    <!-- <p class="error__alert" id="errorA"></p>
+                    <p class="error__alert" id="errorB"></p>
+                    <p class="error__alert" id="errorC"></p> -->
+                    <button class="add__save" id="addSave">Сохранить</button>
+                    <a href="#" id="addCancel" class="add__cancel">Отмена</a>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
+    <script defer type="module" src="main_new.js"></script>
+</body>
+</html>
